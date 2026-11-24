@@ -1,0 +1,22 @@
+{
+  "name": "@bxmax/newyear-effects",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "New Year visual effects module for 1C-Bitrix",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node tools/chef-build.mjs",
+    "build:engine": "node tools/chef-build.mjs newyear.effects.engine",
+    "build:admin": "node tools/chef-build.mjs newyear.effects.admin",
+    "lint:admin": "node tools/chef-build.mjs --lint newyear.effects.admin",
+    "test": "npm run test:php && npm run test:js",
+    "test:php": "php -d auto_prepend_file= tests/php/run.php && php -d auto_prepend_file= tests/php/installer-main23.php",
+    "test:js": "node --test install/js/newyear/effects/engine/tests/js/*.test.mjs"
+  },
+  "devDependencies": {
+    "@bitrix/chef": "2.4.0"
+  }
+}

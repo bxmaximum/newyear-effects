@@ -1,0 +1,165 @@
+.ny-admin-stage-wrap {
+	margin: 0 0 16px;
+	border-radius: 12px;
+	overflow: hidden;
+	border: 1px solid #d7e2ec;
+	background: #ffffff;
+	box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+}
+
+.ny-admin-stage-bar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 12px 16px;
+	background: #f8fafc;
+	border-bottom: 1px solid #e2e8f0;
+}
+
+.ny-admin-stage-title {
+	font-size: 14px;
+	font-weight: 700;
+	color: #0f172a;
+}
+
+.ny-admin-stage-sub {
+	font-size: 12px;
+	color: #64748b;
+	margin-top: 2px;
+}
+
+.ny-admin-stage-actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.ny-admin-tier-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 4px 10px;
+	border-radius: 999px;
+	background: #e2e8f0;
+	color: #1e293b;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.ny-admin-stage {
+	position: relative;
+	height: 230px;
+	background: linear-gradient(160deg, #0b132b 0%, #1c2541 55%, #16213e 100%);
+	overflow: hidden;
+}
+
+.ny-admin-mock-header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 26px 28px 14px;
+	background: rgba(15, 23, 42, 0.42);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ny-admin-mock-logo {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	padding: 8px 16px;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.12);
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 15px;
+	letter-spacing: 0.02em;
+}
+
+.ny-admin-mock-nav {
+	display: flex;
+	gap: 18px;
+	color: rgba(226, 232, 240, 0.85);
+	font-size: 13px;
+}
+
+.ny-admin-presets {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 16px;
+	background: #f8fafc;
+	border-top: 1px solid #e2e8f0;
+}
+
+.ny-admin-presets-label {
+	font-size: 12px;
+	font-weight: 600;
+	color: #475569;
+	margin-right: 4px;
+}
+
+.ny-admin-preset-btn {
+	cursor: pointer;
+	border: 1px solid #cbd5e1;
+	background: #ffffff;
+	color: #1e293b;
+	border-radius: 999px;
+	padding: 5px 12px;
+	font-size: 12px;
+	font-weight: 600;
+	transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.ny-admin-preset-btn:hover {
+	background: #eff6ff;
+	border-color: #60a5fa;
+	color: #1d4ed8;
+}
+
+.ny-opt-row td {
+	padding: 9px 10px;
+	vertical-align: top;
+}
+
+.ny-opt-row input[type="text"],
+.ny-opt-row input[type="number"],
+.ny-opt-row select,
+.ny-opt-row textarea {
+	width: 340px;
+	max-width: 100%;
+}
+
+.ny-opt-hint {
+	color: #64748b;
+	font-size: 11px;
+	margin-top: 4px;
+	line-height: 1.4;
+}
+
+.ny-opt-color-row {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.ny-opt-color-row input[type="text"] {
+	width: 110px;
+}
+
+.ny-opt-range-row {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.ny-opt-range-row input[type="range"] {
+	width: 220px;
+}
+
+.ny-opt-range-row input[type="number"] {
+	width: 72px;
+}

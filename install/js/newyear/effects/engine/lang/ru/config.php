@@ -1,0 +1,10 @@
+<?php
+
+$MESS['NEWYEAR_EFFECTS_WIDGET_COUNTDOWN_PREFIX'] = 'До Нового года';
+$MESS['NEWYEAR_EFFECTS_WIDGET_DAYS_SHORT'] = 'д';
+$MESS['NEWYEAR_EFFECTS_WIDGET_HAPPY_NEW_YEAR'] = 'С Новым #YEAR# годом!';
+$MESS['NEWYEAR_EFFECTS_WIDGET_TOGGLE_OFF'] = 'Выключить новогодние эффекты';
+$MESS['NEWYEAR_EFFECTS_WIDGET_TOGGLE_ON'] = 'Включить новогодние эффекты';
+$MESS['NEWYEAR_EFFECTS_WIDGET_CELEBRATE'] = 'Запустить праздничный салют';
+$MESS['NEWYEAR_EFFECTS_WIDGET_DISABLED_LABEL'] = 'Эффекты выкл.';
+$MESS['NEWYEAR_EFFECTS_WIDGET_ENABLED_LABEL'] = 'Праздник вкл.';

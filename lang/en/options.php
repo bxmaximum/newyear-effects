@@ -1,0 +1,124 @@
+<?php
+
+$MESS['NEWYEAR_EFFECTS_OPT_ACCESS_DENIED'] = 'Access to module settings is denied';
+$MESS['NEWYEAR_EFFECTS_OPT_SAVED'] = 'New Year effects settings saved';
+$MESS['NEWYEAR_EFFECTS_OPT_PRESET_APPLIED'] = 'Preset "#PRESET#" applied';
+$MESS['NEWYEAR_EFFECTS_OPT_RESET_DONE'] = 'Settings reset to defaults';
+
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_TITLE'] = 'Live Preview';
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_SUBTITLE'] = 'Change settings below to preview them instantly. Click the tree in the pill for confetti!';
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_LOGO'] = 'My Site';
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_NAV_1'] = 'Catalog';
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_NAV_2'] = 'Deals';
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_NAV_3'] = 'Contact';
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_CELEBRATE'] = 'Test Confetti';
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_TIER'] = 'Render tier';
+
+$MESS['NEWYEAR_EFFECTS_OPT_PRESETS_TITLE'] = 'Quick Presets (1 click)';
+$MESS['NEWYEAR_EFFECTS_OPT_PRESET_CLASSIC'] = 'Classic Fairy Tale';
+$MESS['NEWYEAR_EFFECTS_OPT_PRESET_MINIMAL'] = 'Cozy Minimal';
+$MESS['NEWYEAR_EFFECTS_OPT_PRESET_NORDIC'] = 'Nordic Frost';
+$MESS['NEWYEAR_EFFECTS_OPT_PRESET_FESTIVE'] = 'Festive Carnival';
+$MESS['NEWYEAR_EFFECTS_OPT_PRESET_ECO'] = 'Eco Mode (Max Speed)';
+
+$MESS['NEWYEAR_EFFECTS_TAB_GENERAL'] = 'Schedule & Speed';
+$MESS['NEWYEAR_EFFECTS_TAB_GENERAL_TITLE'] = 'Smart schedule, URL exclusions, and performance guard';
+$MESS['NEWYEAR_EFFECTS_TAB_SNOW'] = 'Snow & Sparkles';
+$MESS['NEWYEAR_EFFECTS_TAB_SNOW_TITLE'] = 'Parallax canvas snowfall with lag protection';
+$MESS['NEWYEAR_EFFECTS_TAB_GARLAND'] = 'Garland';
+$MESS['NEWYEAR_EFFECTS_TAB_GARLAND_TITLE'] = 'Adaptive SVG garland on GPU compositor';
+$MESS['NEWYEAR_EFFECTS_TAB_DECORATIONS'] = 'Ornaments & Widget';
+$MESS['NEWYEAR_EFFECTS_TAB_DECORATIONS_TITLE'] = 'Vector ornaments, corner frost, and visitor widget';
+
+$MESS['NEWYEAR_EFFECTS_OPT_ENABLED'] = 'Enable module';
+$MESS['NEWYEAR_EFFECTS_OPT_ENABLED_HINT'] = 'Master switch: when disabled, zero JS/CSS bytes are loaded on public pages';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_MODE'] = 'Display mode';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_ALWAYS'] = 'Always active';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_DATES'] = 'Automatic annual date range';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_ADMIN'] = 'Administrators only (preview mode)';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_START'] = 'Start date (MM-DD)';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_START_HINT'] = 'Example: 12-15 activates automatically on December 15 every year';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_END'] = 'End date (MM-DD)';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_END_HINT'] = 'Example: 01-15 wraps across New Year through January 15';
+$MESS['NEWYEAR_EFFECTS_OPT_EXCLUDE_URLS'] = 'Excluded URLs (one per line)';
+$MESS['NEWYEAR_EFFECTS_OPT_EXCLUDE_URLS_HINT'] = 'Supports * wildcards, e.g. /personal/order/* and /basket/*';
+$MESS['NEWYEAR_EFFECTS_OPT_PERFORMANCE_MODE'] = 'Performance profile';
+$MESS['NEWYEAR_EFFECTS_OPT_PERF_AUTO'] = 'Auto (FPS watchdog + low-end device adaptation)';
+$MESS['NEWYEAR_EFFECTS_OPT_PERF_HIGH'] = 'High (60 FPS, full parallax)';
+$MESS['NEWYEAR_EFFECTS_OPT_PERF_BALANCED'] = 'Balanced (45 FPS)';
+$MESS['NEWYEAR_EFFECTS_OPT_PERF_ECO'] = 'Eco (30 FPS, minimal particles)';
+$MESS['NEWYEAR_EFFECTS_OPT_MOBILE_MODE'] = 'Mobile devices';
+$MESS['NEWYEAR_EFFECTS_OPT_MOBILE_ECO'] = 'Eco mode (recommended)';
+$MESS['NEWYEAR_EFFECTS_OPT_MOBILE_FULL'] = 'Full effects';
+$MESS['NEWYEAR_EFFECTS_OPT_MOBILE_OFF'] = 'Disable on mobile';
+$MESS['NEWYEAR_EFFECTS_OPT_REDUCED_MOTION'] = 'Respect prefers-reduced-motion';
+$MESS['NEWYEAR_EFFECTS_OPT_REDUCED_MOTION_HINT'] = 'Automatically switches effects to static mode when OS reduced motion is enabled';
+
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_ENABLED'] = 'Enable snowfall';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_INTENSITY'] = 'Intensity (1–100)';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_INTENSITY_HINT'] = 'Auto mode automatically reduces particle count on slower hardware';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_SPEED'] = 'Fall speed (1–10)';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_SIZE_MIN'] = 'Min snowflake size (px)';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_SIZE_MAX'] = 'Max snowflake size (px)';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_WIND'] = 'Winter wind strength (0–10)';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_DEPTH'] = '3D depth parallax (3 layers + bokeh)';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_INTERACTIVE'] = 'Interactive cursor breeze';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_COLOR'] = 'Snowflake tint (HEX)';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_COLOR_HINT'] = 'For light backgrounds try icy blue #dbeafe or #bae6fd';
+$MESS['NEWYEAR_EFFECTS_OPT_SPARKLES_ENABLED'] = 'Golden cursor sparkle trail';
+$MESS['NEWYEAR_EFFECTS_OPT_SPARKLES_HINT'] = 'Rendered on the same canvas with zero DOM nodes; disabled in Eco mode';
+
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_ENABLED'] = 'Enable garland';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_SELECTOR'] = 'Target CSS selector';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_SELECTOR_HINT'] = 'Example: header, .header, #header';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_MODE'] = 'Lighting mode';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_MODE_TWINKLE'] = 'Gentle Twinkle';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_MODE_WAVE'] = 'Smooth Wave';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_MODE_CHASE'] = 'Festive Chase';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_MODE_SPARKLE'] = 'Champagne Sparkle';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_MODE_STEADY'] = 'Calm Steady Glow (no animation)';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_PALETTE'] = 'Color palette';
+$MESS['NEWYEAR_EFFECTS_OPT_PALETTE_WARM_GOLD'] = 'Warm Gold';
+$MESS['NEWYEAR_EFFECTS_OPT_PALETTE_CLASSIC'] = 'Classic Festive';
+$MESS['NEWYEAR_EFFECTS_OPT_PALETTE_NORDIC'] = 'Nordic Ice';
+$MESS['NEWYEAR_EFFECTS_OPT_PALETTE_CANDY'] = 'Candy & Mint';
+$MESS['NEWYEAR_EFFECTS_OPT_PALETTE_CUSTOM'] = 'Custom HEX colors';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_COLORS'] = 'Custom bulb colors (comma-separated HEX)';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_SPEED'] = 'Animation cycle duration (ms)';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_OFFSET_TOP'] = 'Top vertical offset (px)';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_INTERACTIVE'] = 'Gentle bulb sway on hover (never blocks clicks)';
+
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_ENABLED'] = 'Enable element ornaments';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_SELECTOR'] = 'Target CSS selector (logo or block)';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_SELECTOR_HINT'] = 'Example: .logo, #logo, .site-logo';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_TYPE'] = 'Vector ornament';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_HAT'] = 'Santa Hat';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_BALL'] = 'Glass Bauble';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_STAR'] = 'Golden Star';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_CANDY'] = 'Candy Cane';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_WREATH'] = 'Evergreen Wreath';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_BELL'] = 'Golden Jingle Bells';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_SNOWFLAKE'] = 'Ice Snowflake Medallion';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_POSITION'] = 'Ornament position';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_POS_TR'] = 'Top right';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_POS_TL'] = 'Top left';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_POS_TC'] = 'Top center';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_SIZE'] = 'Ornament size';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_SIZE_SM'] = 'Small (28px)';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_SIZE_MD'] = 'Medium (38px)';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_SIZE_LG'] = 'Large (50px)';
+
+$MESS['NEWYEAR_EFFECTS_OPT_FROST_ENABLED'] = 'Corner frost vignette (0% CPU usage)';
+$MESS['NEWYEAR_EFFECTS_OPT_FROST_OPACITY'] = 'Frost opacity (%)';
+$MESS['NEWYEAR_EFFECTS_OPT_WIDGET_MODE'] = 'Visitor mini-widget';
+$MESS['NEWYEAR_EFFECTS_OPT_WIDGET_COUNTDOWN'] = 'New Year countdown + pause toggle + confetti';
+$MESS['NEWYEAR_EFFECTS_OPT_WIDGET_TOGGLE'] = 'Compact effects toggle button only';
+$MESS['NEWYEAR_EFFECTS_OPT_WIDGET_HIDDEN'] = 'Hide widget';
+$MESS['NEWYEAR_EFFECTS_OPT_WIDGET_POSITION'] = 'Widget corner';
+$MESS['NEWYEAR_EFFECTS_OPT_WIDGET_POS_BR'] = 'Bottom right';
+$MESS['NEWYEAR_EFFECTS_OPT_WIDGET_POS_BL'] = 'Bottom left';
+
+$MESS['NEWYEAR_EFFECTS_OPT_BTN_SAVE'] = 'Save';
+$MESS['NEWYEAR_EFFECTS_OPT_BTN_APPLY'] = 'Apply';
+$MESS['NEWYEAR_EFFECTS_OPT_BTN_RESET'] = 'Reset to defaults';
+$MESS['NEWYEAR_EFFECTS_OPT_RESET_CONFIRM'] = 'Reset all module settings to defaults?';

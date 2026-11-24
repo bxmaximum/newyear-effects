@@ -1,0 +1,124 @@
+<?php
+
+$MESS['NEWYEAR_EFFECTS_OPT_ACCESS_DENIED'] = 'Доступ к настройкам модуля запрещён';
+$MESS['NEWYEAR_EFFECTS_OPT_SAVED'] = 'Настройки новогодних эффектов сохранены';
+$MESS['NEWYEAR_EFFECTS_OPT_PRESET_APPLIED'] = 'Применён пресет «#PRESET#»';
+$MESS['NEWYEAR_EFFECTS_OPT_RESET_DONE'] = 'Настройки сброшены к значениям по умолчанию';
+
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_TITLE'] = 'Живой предпросмотр';
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_SUBTITLE'] = 'Меняйте настройки ниже — превью обновляется мгновенно. Нажмите на ёлку в виджете для салюта!';
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_LOGO'] = 'Мой Сайт';
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_NAV_1'] = 'Каталог';
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_NAV_2'] = 'Акции';
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_NAV_3'] = 'Контакты';
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_CELEBRATE'] = 'Тест салюта';
+$MESS['NEWYEAR_EFFECTS_OPT_PREVIEW_TIER'] = 'Режим рендера';
+
+$MESS['NEWYEAR_EFFECTS_OPT_PRESETS_TITLE'] = 'Быстрые пресеты (1 клик)';
+$MESS['NEWYEAR_EFFECTS_OPT_PRESET_CLASSIC'] = 'Классическая сказка';
+$MESS['NEWYEAR_EFFECTS_OPT_PRESET_MINIMAL'] = 'Уютный минимализм';
+$MESS['NEWYEAR_EFFECTS_OPT_PRESET_NORDIC'] = 'Северное сияние';
+$MESS['NEWYEAR_EFFECTS_OPT_PRESET_FESTIVE'] = 'Праздничный карнавал';
+$MESS['NEWYEAR_EFFECTS_OPT_PRESET_ECO'] = 'Эко-режим (максимум скорости)';
+
+$MESS['NEWYEAR_EFFECTS_TAB_GENERAL'] = 'Расписание и скорость';
+$MESS['NEWYEAR_EFFECTS_TAB_GENERAL_TITLE'] = 'Умное расписание, исключения и защита производительности';
+$MESS['NEWYEAR_EFFECTS_TAB_SNOW'] = 'Снег и искры';
+$MESS['NEWYEAR_EFFECTS_TAB_SNOW_TITLE'] = 'Canvas-снегопад с параллаксом и защитой от лагов';
+$MESS['NEWYEAR_EFFECTS_TAB_GARLAND'] = 'Гирлянда';
+$MESS['NEWYEAR_EFFECTS_TAB_GARLAND_TITLE'] = 'Адаптивная SVG-гирлянда на GPU-композиторе';
+$MESS['NEWYEAR_EFFECTS_TAB_DECORATIONS'] = 'Украшения и виджет';
+$MESS['NEWYEAR_EFFECTS_TAB_DECORATIONS_TITLE'] = 'Векторные украшения, морозные узоры и виджет для посетителей';
+
+$MESS['NEWYEAR_EFFECTS_OPT_ENABLED'] = 'Включить модуль';
+$MESS['NEWYEAR_EFFECTS_OPT_ENABLED_HINT'] = 'Главный рубильник: при выключении скрипты и стили на сайт вообще не загружаются';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_MODE'] = 'Режим показа';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_ALWAYS'] = 'Всегда (пока включён модуль)';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_DATES'] = 'Автоматически по датам каждый год';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_ADMIN'] = 'Только для администраторов (предпросмотр)';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_START'] = 'Дата начала (ММ-ДД)';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_START_HINT'] = 'Например, 12-15 — включится само 15 декабря любого года';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_END'] = 'Дата окончания (ММ-ДД)';
+$MESS['NEWYEAR_EFFECTS_OPT_SCHEDULE_END_HINT'] = 'Например, 01-15 — работает через смену года до 15 января';
+$MESS['NEWYEAR_EFFECTS_OPT_EXCLUDE_URLS'] = 'Исключённые URL (по одному в строке)';
+$MESS['NEWYEAR_EFFECTS_OPT_EXCLUDE_URLS_HINT'] = 'Поддерживается маска *, например /personal/order/* и /basket/* — чтобы не отвлекать при оформлении заказа';
+$MESS['NEWYEAR_EFFECTS_OPT_PERFORMANCE_MODE'] = 'Профиль производительности';
+$MESS['NEWYEAR_EFFECTS_OPT_PERF_AUTO'] = 'Авто (монитор FPS + адаптация под слабое железо)';
+$MESS['NEWYEAR_EFFECTS_OPT_PERF_HIGH'] = 'Максимум (60 FPS, полный параллакс)';
+$MESS['NEWYEAR_EFFECTS_OPT_PERF_BALANCED'] = 'Сбалансированный (45 FPS)';
+$MESS['NEWYEAR_EFFECTS_OPT_PERF_ECO'] = 'Эко (30 FPS, минимум частиц, без интерактива)';
+$MESS['NEWYEAR_EFFECTS_OPT_MOBILE_MODE'] = 'Поведение на мобильных';
+$MESS['NEWYEAR_EFFECTS_OPT_MOBILE_ECO'] = 'Эко-режим (рекомендуется)';
+$MESS['NEWYEAR_EFFECTS_OPT_MOBILE_FULL'] = 'Полные эффекты';
+$MESS['NEWYEAR_EFFECTS_OPT_MOBILE_OFF'] = 'Отключить на мобильных';
+$MESS['NEWYEAR_EFFECTS_OPT_REDUCED_MOTION'] = 'Уважать prefers-reduced-motion';
+$MESS['NEWYEAR_EFFECTS_OPT_REDUCED_MOTION_HINT'] = 'Автоматически переводит эффекты в статичный режим, если в ОС отключены анимации';
+
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_ENABLED'] = 'Включить снегопад';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_INTENSITY'] = 'Интенсивность (1–100)';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_INTENSITY_HINT'] = 'В режиме «Авто» число частиц автоматически снижается на слабых ПК';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_SPEED'] = 'Скорость падения (1–10)';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_SIZE_MIN'] = 'Мин. размер снежинки (px)';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_SIZE_MAX'] = 'Макс. размер снежинки (px)';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_WIND'] = 'Сила зимнего ветра (0–10)';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_DEPTH'] = '3D-глубина (3 слоя параллакса и боке)';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_INTERACTIVE'] = 'Реакция снежинок на движение курсора';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_COLOR'] = 'Оттенок снежинок (HEX)';
+$MESS['NEWYEAR_EFFECTS_OPT_SNOW_COLOR_HINT'] = 'Для светлых сайтов попробуйте нежно-голубой #dbeafe или #bae6fd';
+$MESS['NEWYEAR_EFFECTS_OPT_SPARKLES_ENABLED'] = 'Волшебный шлейф золотых искр за курсором';
+$MESS['NEWYEAR_EFFECTS_OPT_SPARKLES_HINT'] = 'Рисуется на том же canvas без лишних DOM-узлов; отключается в эко-режиме';
+
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_ENABLED'] = 'Включить гирлянду';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_SELECTOR'] = 'CSS-селектор элемента';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_SELECTOR_HINT'] = 'Например: header, .header, #header';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_MODE'] = 'Режим свечения';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_MODE_TWINKLE'] = 'Мягкое мерцание (Twinkle)';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_MODE_WAVE'] = 'Плавная волна (Wave)';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_MODE_CHASE'] = 'Бегущие огни (Chase)';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_MODE_SPARKLE'] = 'Искры шампанского (Sparkle)';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_MODE_STEADY'] = 'Спокойный свет (без анимации)';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_PALETTE'] = 'Цветовая палитра';
+$MESS['NEWYEAR_EFFECTS_OPT_PALETTE_WARM_GOLD'] = 'Тёплое золото';
+$MESS['NEWYEAR_EFFECTS_OPT_PALETTE_CLASSIC'] = 'Классическая праздничная';
+$MESS['NEWYEAR_EFFECTS_OPT_PALETTE_NORDIC'] = 'Северный лёд';
+$MESS['NEWYEAR_EFFECTS_OPT_PALETTE_CANDY'] = 'Карамель и мята';
+$MESS['NEWYEAR_EFFECTS_OPT_PALETTE_CUSTOM'] = 'Свои HEX-цвета';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_COLORS'] = 'Свои цвета лампочек (HEX через запятую)';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_SPEED'] = 'Длительность цикла анимации (мс)';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_OFFSET_TOP'] = 'Вертикальный отступ от верха (px)';
+$MESS['NEWYEAR_EFFECTS_OPT_GARLAND_INTERACTIVE'] = 'Покачивание и вспышка лампочек при наведении (не блокирует клики)';
+
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_ENABLED'] = 'Включить украшения на элементах';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_SELECTOR'] = 'CSS-селектор (логотип или блок)';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_SELECTOR_HINT'] = 'Например: .logo, #logo, .site-logo';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_TYPE'] = 'Векторное украшение';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_HAT'] = 'Шапка Деда Мороза';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_BALL'] = 'Стеклянный ёлочный шар';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_STAR'] = 'Вифлеемская звезда';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_CANDY'] = 'Рождественский леденец';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_WREATH'] = 'Еловый венок с ягодами';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_BELL'] = 'Золотые колокольчики';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_SNOWFLAKE'] = 'Ледяной медальон-снежинка';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_POSITION'] = 'Позиция украшения';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_POS_TR'] = 'Справа сверху';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_POS_TL'] = 'Слева сверху';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_POS_TC'] = 'По центру сверху';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_SIZE'] = 'Размер украшения';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_SIZE_SM'] = 'Маленький (28px)';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_SIZE_MD'] = 'Средний (38px)';
+$MESS['NEWYEAR_EFFECTS_OPT_DECOR_SIZE_LG'] = 'Крупный (50px)';
+
+$MESS['NEWYEAR_EFFECTS_OPT_FROST_ENABLED'] = 'Морозные узоры по углам экрана (0% нагрузки на CPU)';
+$MESS['NEWYEAR_EFFECTS_OPT_FROST_OPACITY'] = 'Прозрачность морозных узоров (%)';
+$MESS['NEWYEAR_EFFECTS_OPT_WIDGET_MODE'] = 'Мини-виджет для посетителя';
+$MESS['NEWYEAR_EFFECTS_OPT_WIDGET_COUNTDOWN'] = 'Отсчёт до Нового года + кнопка паузы + салют';
+$MESS['NEWYEAR_EFFECTS_OPT_WIDGET_TOGGLE'] = 'Только компактная кнопка вкл/выкл эффектов';
+$MESS['NEWYEAR_EFFECTS_OPT_WIDGET_HIDDEN'] = 'Скрыть виджет';
+$MESS['NEWYEAR_EFFECTS_OPT_WIDGET_POSITION'] = 'Угол расположения виджета';
+$MESS['NEWYEAR_EFFECTS_OPT_WIDGET_POS_BR'] = 'Справа внизу';
+$MESS['NEWYEAR_EFFECTS_OPT_WIDGET_POS_BL'] = 'Слева внизу';
+
+$MESS['NEWYEAR_EFFECTS_OPT_BTN_SAVE'] = 'Сохранить';
+$MESS['NEWYEAR_EFFECTS_OPT_BTN_APPLY'] = 'Применить';
+$MESS['NEWYEAR_EFFECTS_OPT_BTN_RESET'] = 'Сбросить по умолчанию';
+$MESS['NEWYEAR_EFFECTS_OPT_RESET_CONFIRM'] = 'Сбросить все настройки модуля к значениям по умолчанию?';

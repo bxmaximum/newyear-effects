@@ -1,0 +1,512 @@
+/* =========================================================
+   Newyear Effects v2.0 — GPU Compositor-First Styles
+   ========================================================= */
+
+.ny-fx-canvas {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 9990;
+	contain: strict;
+}
+
+.ny-fx-canvas--scoped {
+	position: absolute;
+	z-index: 15;
+}
+
+/* =========================================================
+   FROSTED CORNERS (0% CPU)
+   ========================================================= */
+
+.ny-fx-frost {
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	z-index: 9985;
+	overflow: hidden;
+	opacity: var(--ny-frost-opacity, 0.35);
+	contain: strict;
+}
+
+.ny-fx-frost--scoped {
+	position: absolute;
+	z-index: 10;
+}
+
+.ny-fx-frost__corner {
+	position: absolute;
+	width: clamp(90px, 12vw, 180px);
+	height: clamp(90px, 12vw, 180px);
+}
+
+.ny-fx-frost--scoped .ny-fx-frost__corner {
+	width: 96px;
+	height: 96px;
+}
+
+.ny-fx-frost__corner svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.ny-fx-frost__corner--tl {
+	top: 0;
+	left: 0;
+}
+
+.ny-fx-frost__corner--tr {
+	top: 0;
+	right: 0;
+	transform: scaleX(-1);
+}
+
+.ny-fx-frost__corner--bl {
+	bottom: 0;
+	left: 0;
+	transform: scaleY(-1);
+}
+
+.ny-fx-frost__corner--br {
+	bottom: 0;
+	right: 0;
+	transform: scale(-1, -1);
+}
+
+/* =========================================================
+   GARLAND (Compositor-Only Glow: opacity + transform)
+   ========================================================= */
+
+.ny-fx-garland {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 44px;
+	pointer-events: none;
+	z-index: 9988;
+	overflow: visible;
+	contain: layout style;
+}
+
+.ny-fx-garland__wire {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 38px;
+	overflow: visible;
+}
+
+.ny-fx-garland__wire path {
+	fill: none;
+	stroke: rgba(34, 46, 38, 0.78);
+	stroke-width: 2;
+	stroke-linecap: round;
+}
+
+.ny-fx-bulb {
+	position: absolute;
+	width: 12px;
+	height: 18px;
+	margin-left: -6px;
+	transform-origin: 50% 0;
+	transform: rotate(var(--ny-bulb-tilt, 0deg));
+}
+
+.ny-fx-bulb__cap {
+	position: absolute;
+	top: -1px;
+	left: 50%;
+	width: 6px;
+	height: 5px;
+	margin-left: -3px;
+	background: linear-gradient(180deg, #4b5563 0%, #1f2937 100%);
+	border-radius: 2px 2px 1px 1px;
+}
+
+.ny-fx-bulb__glass {
+	position: absolute;
+	top: 3px;
+	left: 0;
+	width: 12px;
+	height: 15px;
+	border-radius: 50% 50% 50% 50% / 38% 38% 62% 62%;
+	background: radial-gradient(circle at 38% 32%, #ffffff 0%, var(--ny-bulb-color, #ffd666) 46%, rgba(0, 0, 0, 0.28) 100%);
+	opacity: 0.92;
+}
+
+.ny-fx-bulb__halo {
+	position: absolute;
+	top: -8px;
+	left: -13px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	background: radial-gradient(circle, var(--ny-bulb-color, #ffd666) 0%, transparent 68%);
+	opacity: 0.7;
+}
+
+/* Режим Twinkle (плавное дыхание) */
+.ny-fx-garland--mode-twinkle .ny-fx-bulb__halo {
+	animation: ny-fx-twinkle var(--ny-garland-dur, 1200ms) ease-in-out var(--ny-bulb-delay, 0ms) infinite;
+}
+
+.ny-fx-garland--mode-twinkle .ny-fx-bulb__glass {
+	animation: ny-fx-glass-dim var(--ny-garland-dur, 1200ms) ease-in-out var(--ny-bulb-delay, 0ms) infinite;
+}
+
+/* Режим Wave (бегущая волна) */
+.ny-fx-garland--mode-wave .ny-fx-bulb__halo {
+	animation: ny-fx-wave var(--ny-garland-dur, 1400ms) ease-in-out var(--ny-bulb-delay, 0ms) infinite;
+}
+
+.ny-fx-garland--mode-wave .ny-fx-bulb__glass {
+	animation: ny-fx-glass-dim var(--ny-garland-dur, 1400ms) ease-in-out var(--ny-bulb-delay, 0ms) infinite;
+}
+
+/* Режим Chase (бегущие огни по группам) */
+.ny-fx-garland--mode-chase .ny-fx-bulb__halo {
+	animation: ny-fx-chase var(--ny-garland-dur, 900ms) linear var(--ny-bulb-delay, 0ms) infinite;
+}
+
+.ny-fx-garland--mode-chase .ny-fx-bulb__glass {
+	animation: ny-fx-chase-glass var(--ny-garland-dur, 900ms) linear var(--ny-bulb-delay, 0ms) infinite;
+}
+
+/* Режим Sparkle (искристое мерцание) */
+.ny-fx-garland--mode-sparkle .ny-fx-bulb__halo {
+	animation: ny-fx-sparkle var(--ny-garland-dur, 1100ms) ease-in-out var(--ny-bulb-delay, 0ms) infinite;
+}
+
+/* Режим Steady (спокойное тёплое свечение, 0 анимаций) */
+.ny-fx-garland--mode-steady .ny-fx-bulb__halo {
+	opacity: 0.62;
+	animation: none;
+}
+
+.ny-fx-garland--mode-steady .ny-fx-bulb__glass {
+	opacity: 0.95;
+	animation: none;
+}
+
+/* Пауза вне вьюпорта или на скрытой вкладке */
+.ny-fx-garland--paused .ny-fx-bulb__halo,
+.ny-fx-garland--paused .ny-fx-bulb__glass {
+	animation-play-state: paused;
+}
+
+/* Интерактивное качание лампочки при проходе курсора рядом */
+.ny-fx-bulb--ping {
+	animation: ny-fx-bulb-swing 640ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ny-fx-bulb--ping .ny-fx-bulb__halo {
+	opacity: 1 !important;
+	transform: scale(1.25);
+}
+
+@keyframes ny-fx-twinkle {
+	0%, 100% {
+		opacity: 0.22;
+		transform: scale(0.78);
+	}
+	50% {
+		opacity: 0.95;
+		transform: scale(1.12);
+	}
+}
+
+@keyframes ny-fx-glass-dim {
+	0%, 100% {
+		opacity: 0.52;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
+@keyframes ny-fx-wave {
+	0%, 100% {
+		opacity: 0.16;
+		transform: scale(0.7);
+	}
+	35% {
+		opacity: 0.98;
+		transform: scale(1.18);
+	}
+	70% {
+		opacity: 0.28;
+		transform: scale(0.85);
+	}
+}
+
+@keyframes ny-fx-chase {
+	0%, 28% {
+		opacity: 1;
+		transform: scale(1.16);
+	}
+	34%, 100% {
+		opacity: 0.12;
+		transform: scale(0.68);
+	}
+}
+
+@keyframes ny-fx-chase-glass {
+	0%, 28% {
+		opacity: 1;
+	}
+	34%, 100% {
+		opacity: 0.45;
+	}
+}
+
+@keyframes ny-fx-sparkle {
+	0%, 72%, 100% {
+		opacity: 0.25;
+		transform: scale(0.82);
+	}
+	84% {
+		opacity: 1;
+		transform: scale(1.26);
+	}
+}
+
+@keyframes ny-fx-bulb-swing {
+	0% {
+		transform: rotate(var(--ny-bulb-tilt, 0deg));
+	}
+	25% {
+		transform: rotate(calc(var(--ny-bulb-tilt, 0deg) + 18deg));
+	}
+	55% {
+		transform: rotate(calc(var(--ny-bulb-tilt, 0deg) - 12deg));
+	}
+	80% {
+		transform: rotate(calc(var(--ny-bulb-tilt, 0deg) + 5deg));
+	}
+	100% {
+		transform: rotate(var(--ny-bulb-tilt, 0deg));
+	}
+}
+
+/* =========================================================
+   SVG ORNAMENTS
+   ========================================================= */
+
+.ny-fx-ornament {
+	position: absolute;
+	display: block;
+	pointer-events: none;
+	z-index: 120;
+	line-height: 0;
+	transform-origin: top center;
+}
+
+.ny-fx-ornament svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.ny-fx-ornament--size-sm {
+	width: 28px;
+	height: 28px;
+}
+
+.ny-fx-ornament--size-md {
+	width: 38px;
+	height: 38px;
+}
+
+.ny-fx-ornament--size-lg {
+	width: 50px;
+	height: 50px;
+}
+
+.ny-fx-ornament--pos-top-right {
+	top: -16px;
+	right: -14px;
+}
+
+.ny-fx-ornament--pos-top-left {
+	top: -16px;
+	left: -14px;
+}
+
+.ny-fx-ornament--pos-top-center {
+	top: -20px;
+	left: 50%;
+	margin-left: -19px;
+}
+
+.ny-fx-ornament--size-sm.ny-fx-ornament--pos-top-center {
+	margin-left: -14px;
+}
+
+.ny-fx-ornament--size-lg.ny-fx-ornament--pos-top-center {
+	margin-left: -25px;
+}
+
+.ny-fx-ornament--hat {
+	transform: rotate(10deg);
+}
+
+.ny-fx-ornament--ball,
+.ny-fx-ornament--bell {
+	animation: ny-fx-pendulum 3.6s ease-in-out infinite;
+}
+
+.ny-fx-ornament--star,
+.ny-fx-ornament--snowflake {
+	animation: ny-fx-pulse-soft 2.8s ease-in-out infinite;
+}
+
+.ny-fx-ornament--static {
+	animation: none !important;
+}
+
+@keyframes ny-fx-pendulum {
+	0%, 100% {
+		transform: rotate(-6deg);
+	}
+	50% {
+		transform: rotate(6deg);
+	}
+}
+
+@keyframes ny-fx-pulse-soft {
+	0%, 100% {
+		transform: scale(1);
+		opacity: 0.92;
+	}
+	50% {
+		transform: scale(1.08);
+		opacity: 1;
+	}
+}
+
+/* =========================================================
+   SMART COUNTDOWN & VISITOR CONTROL WIDGET
+   ========================================================= */
+
+.ny-fx-widget {
+	position: fixed;
+	bottom: 18px;
+	z-index: 9995;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 5px 7px;
+	border-radius: 999px;
+	background: rgba(15, 23, 42, 0.72);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.24);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	color: #f8fafc;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-size: 12px;
+	line-height: 1;
+	-webkit-user-select: none;
+	        user-select: none;
+	transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.ny-fx-widget--scoped {
+	position: absolute;
+	bottom: 12px;
+	z-index: 25;
+}
+
+.ny-fx-widget--bottom-right {
+	right: 18px;
+}
+
+.ny-fx-widget--bottom-left {
+	left: 18px;
+}
+
+.ny-fx-widget--scoped.ny-fx-widget--bottom-right {
+	right: 12px;
+}
+
+.ny-fx-widget--scoped.ny-fx-widget--bottom-left {
+	left: 12px;
+}
+
+.ny-fx-widget--muted {
+	opacity: 0.65;
+}
+
+.ny-fx-widget__countdown,
+.ny-fx-widget__toggle {
+	appearance: none;
+	border: 0;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 4px 8px;
+	border-radius: 999px;
+	transition: background-color 0.16s ease, transform 0.12s ease;
+	position: relative;
+}
+
+.ny-fx-widget__countdown::before,
+.ny-fx-widget__toggle::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	min-width: 44px;
+	height: 44px;
+	transform: translate(-50%, -50%);
+}
+
+.ny-fx-widget__countdown:hover,
+.ny-fx-widget__toggle:hover {
+	background: rgba(255, 255, 255, 0.14);
+}
+
+.ny-fx-widget__countdown:focus-visible,
+.ny-fx-widget__toggle:focus-visible {
+	outline: 2px solid #ffffff;
+	outline-offset: 2px;
+}
+
+.ny-fx-widget__countdown:active,
+.ny-fx-widget__toggle:active {
+	transform: scale(0.95);
+}
+
+.ny-fx-widget__text {
+	font-variant-numeric: tabular-nums;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	white-space: nowrap;
+}
+
+.ny-fx-widget__toggle {
+	background: rgba(255, 255, 255, 0.1);
+	font-weight: 600;
+	min-width: 28px;
+	justify-content: center;
+}
+
+.ny-fx-widget--static .ny-fx-widget__countdown,
+.ny-fx-widget--static .ny-fx-widget__toggle {
+	transition: none;
+}
+
+.ny-fx-widget--static .ny-fx-widget__countdown:active,
+.ny-fx-widget--static .ny-fx-widget__toggle:active {
+	transform: none;
+}

@@ -1,0 +1,4 @@
+<?php
+
+$MESS['NEWYEAR_EFFECTS_ERROR_UNKNOWN_PRESET'] = 'Unknown preset: #PRESET#';
+$MESS['NEWYEAR_EFFECTS_ERROR_INVALID_EFFECT'] = 'Unsupported effect: #EFFECT#';

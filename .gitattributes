@@ -1,0 +1,19 @@
+* text=auto eol=lf
+
+*.php text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+*.gif binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+
+package-lock.json linguist-generated=true
+install/js/**/dist/** linguist-generated=true
