@@ -18,5 +18,14 @@
   },
   "devDependencies": {
     "@bitrix/chef": "2.4.0"
+  },
+  "optionalDependencies": {
+    "@esbuild/linux-x64": "0.28.2",
+    "@oxc-parser/binding-linux-x64-gnu": "0.152.0",
+    "@oxlint/binding-linux-x64-gnu": "1.87.0",
+    "@rolldown/binding-linux-x64-gnu": "1.2.19",
+    "@rollup/rollup-linux-x64-gnu": "4.68.8",
+    "@typescript/typescript-linux-x64": "7.1.0-dev.20260928.1",
+    "lightningcss-linux-x64-gnu": "1.33.0"
   }
 }
